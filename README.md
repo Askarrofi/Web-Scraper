@@ -25,12 +25,16 @@ Pengembangan proyek ini bertujuan untuk mempermudah proses scraping website, bah
 ## Alur Logika (User & System Flow)
 *(Bagaimana cara kerja alat ini dari sudut pandang pengguna)*
 1. **User** menjalankan program.
-2. **Sistem** meminta URL target dan item data yang ingin diambil (contoh: Judul, Harga, Lokasi).
+2. **Sistem** meminta URL target.
 3. **Sistem** membuka *browser* tersembunyi (Playwright).
-4. **AI** memindai halaman pertama untuk mengenali pola dan tombol navigasi.
-5. **AI** meracik fungsi ekstraksi data.
-6. **Sistem** mengulang proses (ekstrak -> pindah halaman) sampai batas maksimal atau tombol *next* habis.
-7. **Sistem** menutup *browser* dan menyimpan file `output.json`.
+4. **Sistem** menunggu atau melakukan scroll hingga semua konten tampil.
+5. **Sistem** mengambil link-link konten untuk dibuka nanti dan mencari tombol navigasi untuk kehalaman berikutnya.
+6. **AI** membuka dan memindai konten pertama dari link yang ditemukan untuk mengenali item-item.
+7. **Sistem** memberikan rekomendasi dari item-item yang ditemukan dalam konten dan meminta kepada user item apa saja yang ingin diambil.
+8. **User** memasukan nama-nama item yang ingin diambil, baik dari rekomendasi AI (menggunakan digit) atau nama sendiri (input nama).
+9. **AI** meracik fungsi ekstraksi data.
+10. **Sistem** mengulang proses ((buka konten -> ekstrak data )-> pindah halaman) sampai batas maksimal atau tombol *next* habis.
+11. **Sistem** menutup *browser* dan menyimpan file `item_XXXX.json` pertiap kontennya.
 
 ---
 
@@ -41,9 +45,3 @@ Pengembangan proyek ini bertujuan untuk mempermudah proses scraping website, bah
 - **HTML Parser:** BeautifulSoup4
 - **Hardware:** Lenovo Legion 7i
 - **Tool:** Github
-
----
-
-## Catatan Tambahan & Ide Masa Depan (Backlog)
-*(Taruh ide-ide liar atau fitur rumit di sini agar tidak mengotori versi awal)*
-- *Mungkin nanti bisa buat versi GUI/Web*
