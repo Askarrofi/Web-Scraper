@@ -13,7 +13,6 @@ Pengembangan proyek ini bertujuan untuk mempermudah proses scraping website, bah
 ---
 
 ## Fitur Inti (Core Features)
-*(Tuliskan ide-ide fiturmu di sini. Fokus pada apa yang penting saja)*
 1. **Input Interaktif Sederhana:** Meminta URL dan daftar target data via terminal.
 2. **AI Extractor Generator:** AI membuat kode pengeruk spesifik di latar belakang (sekali saja).
 3. **Auto-Pagination:** Bisa berpindah halaman otomatis hingga data habis.
@@ -23,7 +22,6 @@ Pengembangan proyek ini bertujuan untuk mempermudah proses scraping website, bah
 ---
 
 ## Alur Logika (User & System Flow)
-*(Bagaimana cara kerja alat ini dari sudut pandang pengguna)*
 1. **User** menjalankan program.
 2. **Sistem** meminta URL target.
 3. **Sistem** membuka *browser* tersembunyi (Playwright).
