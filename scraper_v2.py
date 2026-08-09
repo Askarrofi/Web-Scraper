@@ -29,7 +29,7 @@ from playwright.sync_api import sync_playwright
 
 # ============================================================== KONFIG ===
 
-API_KEY = os.environ.get("GEMINI_API_KEY", "")
+API_KEY = os.environ.get("GEMINI_API_KEY", "AQ.Ab8RN6JVJ1T3r88i_quKTlr5QFiaLlbZRLEmtSKDy9wVVSbt3Q")
 MODEL_NAME = "gemini-3.1-flash-lite"
 
 CHUNK_SIZE = 100_000
