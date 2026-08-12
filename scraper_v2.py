@@ -41,7 +41,7 @@ MAX_RETRY_AI = 5
 EXTRACTOR_TIMEOUT_DETIK = 5.0
 
 OUTPUT_FILE = "output.json"
-FOLDER_HASIL_PREFIX = "Output"
+FOLDER = "Output"
 TIDAK_DITEMUKAN = "Tidak Ditemukan"
 
 SCROLL_MAX_PUTARAN = 20
@@ -655,7 +655,7 @@ def main() -> None:
     pilihan = input("> ").strip()
     if pilihan == "2":
         mode_simpan = "per_item"
-        tujuan_simpan = f"{FOLDER_HASIL_PREFIX}_{int(time.time())}"
+        tujuan_simpan = f"{FOLDER}_{int(time.time())}"
         os.makedirs(tujuan_simpan, exist_ok=True)
     else:
         mode_simpan = "satu_file"
