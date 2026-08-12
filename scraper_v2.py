@@ -40,7 +40,7 @@ DELAY_BACA = 10
 MAX_RETRY_AI = 5
 EXTRACTOR_TIMEOUT_DETIK = 5.0
 
-OUTPUT_FILE = "output.json"
+FILE = "output.json"
 FOLDER = "Output"
 TIDAK_DITEMUKAN = "Tidak Ditemukan"
 
@@ -659,7 +659,7 @@ def main() -> None:
         os.makedirs(tujuan_simpan, exist_ok=True)
     else:
         mode_simpan = "satu_file"
-        tujuan_simpan = OUTPUT_FILE
+        tujuan_simpan = FILE
 
     print("\n" + "=" * 50 + "\nMEMULAI PROSES CRAWLING...\n" + "=" * 50 + "\n")
 
