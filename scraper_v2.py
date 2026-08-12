@@ -682,7 +682,7 @@ def main() -> None:
                 title_sebelumnya = ""
                 kolom: list[str] = []
                 extractor: Extractor | None = None
-                scout_sudah_jalan = False
+                scout = False
                 total_item = 0
 
                 while True:
@@ -707,9 +707,9 @@ def main() -> None:
                         break
                     title_sebelumnya = title_pertama or title_sebelumnya
 
-                    if not scout_sudah_jalan:
+                    if not scout:
                         kolom, extractor = jalankan_scout(context, page_utama, data_list[0].get("link", ""))
-                        scout_sudah_jalan = True
+                        scout = True
 
                     print(f"\n=== FASE 2: DEEP CRAWLING HALAMAN {halaman_ke} ===")
                     hasil_halaman = []
