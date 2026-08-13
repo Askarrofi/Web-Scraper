@@ -107,11 +107,6 @@ Extractor = Callable[[str], dict[str, Any]]
 
 
 # =================================================== KEAMANAN KODE AI ===
-# Dipangkas dari pengecekan AST bertingkat (top-level statement, dunder
-# regex, global/nonlocal, dst) menjadi satu pemeriksaan lurus: fungsi wajib
-# ada, hanya boleh import modul yang diizinkan, dan tidak boleh menyentuh
-# nama/atribut berbahaya. Isolasi sesungguhnya tetap datang dari sandbox
-# `__builtins__` terbatas saat exec(), bukan dari AST ini.
 
 def cek_kode_aman(kode: str) -> None:
     try:
