@@ -665,7 +665,7 @@ def main() -> None:
 
     waktu_mulai = time.monotonic()
     hasil_akhir: list[dict[str, Any]] = []
-////
+
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
