@@ -27,7 +27,7 @@ from google.genai import types
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
-# === KONFIG ===
+# ============================================================== KONFIG ===
 
 API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME = "gemini-3.1-flash-lite"
@@ -106,7 +106,7 @@ class HasilDaftar(TypedDict):
 Extractor = Callable[[str], dict[str, Any]]
 
 
-# ===KEAMANAN KODE AI ===
+# =================================================== KEAMANAN KODE AI ===
 
 def cek_kode_aman(kode: str) -> None:
     try:
@@ -146,7 +146,7 @@ def batas_waktu(detik: float):
         signal.signal(signal.SIGALRM, penangan_lama)
 
 
-# === UTIL HTML/JSON ===
+# ========================================================== UTIL HTML/JSON ===
 
 def bersihkan_html(html_mentah: str) -> str:
     soup = BeautifulSoup(html_mentah, "html.parser")
@@ -200,7 +200,7 @@ def tutup_aman(objek) -> None:
         objek.close()
 
 
-# === AI CALL ===
+# ================================================================ AI CALL ===
 
 def panggil_ai(prompt: str, config: types.GenerateContentConfig = KONFIG_JSON) -> str:
     kesalahan_terakhir: Exception | None = None
@@ -234,7 +234,7 @@ def skema_string_fields(kolom: list[str]) -> types.GenerateContentConfig:
     )
 
 
-# === AI: SCOUT & DAFTAR ITEM ===
+# ================================================== AI: SCOUT & DAFTAR ITEM ===
 
 def ai_scout_kolom(html_bersih: str) -> list[str]:
     skema = types.Schema(
@@ -344,7 +344,7 @@ def ai_baca_konten(html_bersih: str, kolom: list[str]) -> dict[str, Any]:
     return hasil_gabungan
 
 
-# ===EXTRACTOR GENERATOR (SELF-HEAL) ===
+# ============================================== EXTRACTOR GENERATOR (SELF-HEAL) ===
 
 def _prompt_extractor(html_sample: str, kolom: list[str]) -> str:
     skema_json = json.dumps({k: "string" for k in kolom}, indent=2, ensure_ascii=False)
