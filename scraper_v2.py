@@ -38,7 +38,7 @@ DELAY_DAFTAR = 5
 DELAY_BACA = 10
 
 MAX_RETRY_AI = 5
-EXTRACTOR_TIMEOUT_DETIK = 5.0
+EXTRACTOR_TIMEOUT = 5.0
 
 FILE = "output.json"
 FOLDER = "Output"
@@ -418,7 +418,7 @@ def ai_buat_extractor(html_sample: str, kolom: list[str]) -> Extractor | None:
         if not callable(fn):
             raise KodeTidakAmanError(f"AI tidak mendefinisikan fungsi `{NAMA_FUNGSI_EXTRACTOR}`.")
 
-        with batas_waktu(EXTRACTOR_TIMEOUT_DETIK):
+        with batas_waktu(EXTRACTOR_TIMEOUT):
             hasil_tes = fn(html_sample)
         if not isinstance(hasil_tes, dict) or not all(k in hasil_tes for k in kolom):
             raise KodeTidakAmanError("Extractor tidak mengembalikan semua kolom yang diminta.")
@@ -437,7 +437,7 @@ def coba_ekstrak_lokal(extractor: Extractor | None, html: str, kolom: list[str])
     if extractor is None:
         return None
     try:
-        with batas_waktu(EXTRACTOR_TIMEOUT_DETIK):
+        with batas_waktu(EXTRACTOR_TIMEOUT):
             hasil = extractor(html)
         if not isinstance(hasil, dict) or not all(k in hasil for k in kolom):
             return None
