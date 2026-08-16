@@ -198,7 +198,7 @@ def tutup_aman(objek) -> None:
     with contextlib.suppress(Exception):
         objek.close()
 
-aaaaaaaaaaaa
+
 # ================================================================ AI CALL ===
 
 def panggil_ai(prompt: str, config: types.GenerateContentConfig = KONFIG_JSON) -> str:
