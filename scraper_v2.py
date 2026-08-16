@@ -197,7 +197,7 @@ def tulis_json_atomik(data: Any, path: str) -> None:
 def tutup_aman(objek) -> None:
     with contextlib.suppress(Exception):
         objek.close()
-
+aaaaaaaaaaaaaaaaaaaaaa
 
 # ================================================================ AI CALL ===
 
