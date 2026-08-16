@@ -197,7 +197,7 @@ def tulis_json_atomik(data: Any, path: str) -> None:
 def tutup_aman(objek) -> None:
     with contextlib.suppress(Exception):
         objek.close()
-aaaaaaaaaaaaaaaaaaaaaa
+
 
 # ================================================================ AI CALL ===
 
@@ -232,7 +232,7 @@ def skema_string_fields(kolom: list[str]) -> types.GenerateContentConfig:
         response_schema=types.Schema(type=types.Type.OBJECT, properties=properti),
     )
 
-
+aaaaaaaaaaaaaaaaaaaaaaaaa
 # ================================================== AI: SCOUT & DAFTAR ITEM ===
 
 def ai_scout_kolom(html_bersih: str) -> list[str]:
