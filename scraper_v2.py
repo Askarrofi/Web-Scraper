@@ -705,6 +705,7 @@ def main() -> None:
                         kolom, extractor = jalankan_scout(context, page_utama, data_list[0].get("link", ""))
                         scout = True
 aaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaa
                     print(f"\n=== FASE 2: DEEP CRAWLING HALAMAN {halaman_ke} ===")
                     hasil_halaman = []
                     for idx, item in enumerate(data_list, start=1):
