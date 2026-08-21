@@ -26,11 +26,7 @@ from google import genai
 from google.genai import types
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
-title_pertama = data_list[0].get("title")
-                    if title_pertama and title_pertama == title_sebelumnya:
-                        print("[INFO] Data berulang, mentok di ujung.")
-                        break
-                    title_sebelumnya = title_pertama or title_sebelumnya
+
 # ============================================================== KONFIG ===
 
 API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -42,14 +38,14 @@ DELAY_DAFTAR = 5
 DELAY_BACA = 10
 
 MAX_RETRY_AI = 5
-EXTRACTOR_TIMEOUT = 5.0
+EXTRACTOR_TIMEOUT = 5
 
 FILE = "output.json"
 FOLDER = "Output"
 TIDAK_DITEMUKAN = "Tidak Ditemukan"
 
 SCROLL_MAX_PUTARAN = 20
-SCROLL_MAX_DETIK = 60.0
+SCROLL_MAX_DETIK = 60
 SCROLL_BATAS_STAGNAN = 3
 SCROLL_JEDA_MS = 1500
 
