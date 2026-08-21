@@ -702,7 +702,7 @@ def main() -> None:
                     title_sebelumnya = title_pertama or title_sebelumnya
 
                     if not scout:
-                        kolom, extractor = jalankan_scout(context, page_utama, data_list[0].get("link", ""))
+                        kolom, extractor = jalankan_scout(context, page_utama, data_list[0].get("link"))
                         scout = True
 
                     print(f"\n=== FASE 2: DEEP CRAWLING HALAMAN {halaman_ke} ===")
