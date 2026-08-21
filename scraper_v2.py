@@ -28,7 +28,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 # ============================================================== KONFIG ===
-
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME = "gemini-3.1-flash-lite"
 
