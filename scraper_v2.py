@@ -65,7 +65,7 @@ NAMA_TERLARANG = {
     "multiprocessing", "globals", "locals", "vars", "getattr", "setattr",
     "delattr", "breakpoint", "exit", "quit", "__import__",
 }
-aaaaaaaaaaaaaaaaaaaa
+
 BUILTINS_AMAN = {
     "len": len, "str": str, "int": int, "float": float, "bool": bool,
     "list": list, "dict": dict, "tuple": tuple, "set": set,
