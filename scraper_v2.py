@@ -401,7 +401,7 @@ def ai_buat_extractor(html_sample: str, kolom: list[str]) -> Extractor | None:
         kode = kode.strip()
 
         cek_kode_aman(kode)
-
+saaaaaaaaaaaaaaaaaaaaaa
         sandbox_globals: dict[str, Any] = {
             "BeautifulSoup": BeautifulSoup, "re": re, "__builtins__": dict(BUILTINS_AMAN),
         }
