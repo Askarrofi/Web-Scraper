@@ -31,7 +31,7 @@ from playwright.sync_api import sync_playwright
 
 API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL_NAME = "gemini-3.1-flash-lite"
-tes
+
 CHUNK_SIZE = 100_000
 DELAY_SCOUT = 5
 DELAY_DAFTAR = 5
